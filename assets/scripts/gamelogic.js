@@ -1,18 +1,19 @@
 const winlogic = require('./winlogic')
-const findWinner = winlogic.findWinner
+const gameui = require('./gameui')
+
 let player = 'X'
 const cells = []
 const playerMark = function (event) {
   // console.log('player took a turn', event.target.id)
   $('#' + event.target.id).text(player)// updates the cell
   cells[event.target.id] = player
-  const winner = findWinner(cells)
-  if (winner !== undefined) {
+  const winner = winlogic.findWinner(cells)
+  if (winner !== undefined) { // if there's a winner - declare the winner
     console.log('winner is', winner)
-    declareWinner(winner)
+    gameui.declareWinner(winner) // updates ui to announce winner
     return winner
   }
-  if (player === 'X') {
+  if (player === 'X') { // switch players
     player = 'O'
   } else {
     player = 'X'
@@ -20,11 +21,6 @@ const playerMark = function (event) {
   $('#player').text(player) // changes player name in the message box
 }
 
-const declareWinner = function (winner) {
-  $('#winnername').text(winner)
-  $('.board').hide()
-  $('#next-move').hide()
-}
 module.exports = {
   playerMark,
   cells

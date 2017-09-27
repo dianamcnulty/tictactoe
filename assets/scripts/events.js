@@ -1,18 +1,23 @@
 const gamelogic = require('./gamelogic')
 const getFormFields = require(`../../lib/get-form-fields`)
+const gameui = require('./gameui')
 
 const signUpBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
   console.log('I clicked the signup button', data)
+  gameui.showGame()
 }
 const logInBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
   console.log('I clicked the login button', data)
+  gameui.showGame()
 }
 const logOut = function () {
   console.log('I clicked logout')
+  gameui.hideGame()
+  $('#auth').show()
 }
 const reset = function () {
   console.log('I clicked reset')

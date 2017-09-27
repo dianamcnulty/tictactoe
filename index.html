@@ -18,30 +18,33 @@
       <!--<button class='auth'>Log In</button>
       <span>or</span>
       <button class='auth'>Sign Up</button>-->
-      <form id='sign-up'>
-        <input name="credentials[email]" type='text' placeholder="username">
-        <input name="credentials[password]" type="password" placeholder="password">
-        <input name="credentials[password]" type="password" placeholder="confirm password">
-        <button type='submit'>Sign Up</button>
-      </form>
-      <form id='log-in'>
-        <input name="credentials[email]" type='text' placeholder="username">
-        <input name="credentials[password]" type="password" placeholder="password">
-        <button type='submit'>Log In</button>
-      </form>
-
-      <h2 id='next-move'>Player <span id='player'>X</span>, Your move!</h2>
-      <h2>Player <span id='winnername'>__</span> is the Winner!!!!</h2>
-      <section class='board'>
-        <div id='0' class='square'>.</div>
-        <div id='1' class='square'>.</div>
-        <div id='2' class='square'>.</div>
-        <div id='3' class='square'>.</div>
-        <div id='4' class='square'>.</div>
-        <div id='5' class='square'>.</div>
-        <div id='6' class='square'>.</div>
-        <div id='7' class='square'>.</div>
-        <div id='8' class='square'>.</div>
+      <section id='auth'>
+        <form id='sign-up'>
+          <input name="credentials[email]" type='text' placeholder="username">
+          <input name="credentials[password]" type="password" placeholder="password">
+          <input name="credentials[password]" type="password" placeholder="confirm password">
+          <button type='submit'>Sign Up</button>
+        </form>
+        <form id='log-in'>
+          <input name="credentials[email]" type='text' placeholder="username">
+          <input name="credentials[password]" type="password" placeholder="password">
+          <button type='submit'>Log In</button>
+        </form>
+      </section>
+      <section id='game'>
+        <h2 id='next-move'>Player <span id='player'>X</span>, Your move!</h2>
+        <h2 id='declare-win'>Player <span id='winnername'>__</span> is the Winner!!!!</h2>
+        <section class='board'>
+          <div id='0' class='square'>.</div>
+          <div id='1' class='square'>.</div>
+          <div id='2' class='square'>.</div>
+          <div id='3' class='square'>.</div>
+          <div id='4' class='square'>.</div>
+          <div id='5' class='square'>.</div>
+          <div id='6' class='square'>.</div>
+          <div id='7' class='square'>.</div>
+          <div id='8' class='square'>.</div>
+        </section>
       </section>
       <div>
         <button id='reset'class='reset'>reset</button>
