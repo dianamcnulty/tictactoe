@@ -14,7 +14,6 @@ $(() => {
 
 // use require without a reference to ensure a file is bundled
 $(() => {
-    gameui.hideGame()
+  gameui.hideGame()
   events.clickHandlers()
-
 })

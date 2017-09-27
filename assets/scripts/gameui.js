@@ -5,6 +5,7 @@ const hideGame = function () { // hideGame at start
   $('#reset').hide()
   $('#stats').hide()
   $('#logout').hide()
+  $('.error').hide()
 }
 const showGame = function () {
   $('.board').show()

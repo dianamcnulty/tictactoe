@@ -1,23 +1,29 @@
 const gamelogic = require('./gamelogic')
 const getFormFields = require(`../../lib/get-form-fields`)
-const gameui = require('./gameui')
+const authui = require('./authui')
+const api = require('./api')
 
 const signUpBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  console.log('I clicked the signup button', data)
-  gameui.showGame()
+  // console.log('I clicked the signup button', data)
+  api.signUp(data)
+    .then(authui.signUpSuccess)
+    .catch(authui.authFail)
 }
 const logInBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
   console.log('I clicked the login button', data)
-  gameui.showGame()
+  api.logIn(data)
+    .then(authui.logInSuccess)
+    .catch(authui.authFail)
 }
 const logOut = function () {
   console.log('I clicked logout')
-  gameui.hideGame()
-  $('#auth').show()
+  api.logOut()
+    .then(authui.logOutSuccess)
+    .catch(() => console.log('logOut Failure'))
 }
 const reset = function () {
   console.log('I clicked reset')
