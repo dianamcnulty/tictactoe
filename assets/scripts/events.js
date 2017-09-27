@@ -1,3 +1,4 @@
+const gamelogic = require('./gamelogic')
 const getFormFields = require(`../../lib/get-form-fields`)
 
 const signUpBehavior = function (event) {
@@ -9,10 +10,6 @@ const logInBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
   console.log('I clicked the login button', data)
-}
-const playerMove = function (event) {
-  console.log('player took a turn', event.target.id)
-  $('#' + event.target.id).text('X')
 }
 const logOut = function () {
   console.log('I clicked logout')
@@ -26,15 +23,15 @@ const getStats = function () {
 const clickHandlers = function () {
   $('#sign-up').on('submit', signUpBehavior)
   $('#log-in').on('submit', logInBehavior) // need to define logInBehavior
-  $('#boxZero').on('click', playerMove)
-  $('#boxOne').on('click', playerMove)
-  $('#boxTwo').on('click', playerMove)
-  $('#boxThree').on('click', playerMove)
-  $('#boxFour').on('click', playerMove)
-  $('#boxFive').on('click', playerMove)
-  $('#boxSix').on('click', playerMove)
-  $('#boxSeven').on('click', playerMove)
-  $('#boxEight').on('click', playerMove)
+  $('#boxZero').on('click', gamelogic.playerMark)
+  $('#boxOne').on('click', gamelogic.playerMark)
+  $('#boxTwo').on('click', gamelogic.playerMark)
+  $('#boxThree').on('click', gamelogic.playerMark)
+  $('#boxFour').on('click', gamelogic.playerMark)
+  $('#boxFive').on('click', gamelogic.playerMark)
+  $('#boxSix').on('click', gamelogic.playerMark)
+  $('#boxSeven').on('click', gamelogic.playerMark)
+  $('#boxEight').on('click', gamelogic.playerMark)
   $('#reset').on('click', reset)
   $('#logout').on('click', logOut)
   $('#stats').on('click', getStats)
