@@ -1,10 +1,14 @@
+const getFormFields = require(`../../lib/get-form-fields`)
+
 const signUpBehavior = function (event) {
   event.preventDefault()
-  console.log('I clicked the signup button')
+  const data = getFormFields(this)
+  console.log('I clicked the signup button', data)
 }
 const logInBehavior = function (event) {
   event.preventDefault()
-  console.log('I clicked the login button')
+  const data = getFormFields(this)
+  console.log('I clicked the login button', data)
 }
 const playerMove = function (event) {
   console.log('player took a turn', event.target.id)
