@@ -21,8 +21,16 @@ const declareWinner = function (winner) {
   $('.board').hide()
   $('#next-move').hide()
 }
+const declareDraw = function () {
+  console.log('it was a draw')
+  $('#declare-win').html('<h2>Woah, you are evenly matched! <br> This game was a draw</h2>')
+  $('#declare-win').show()
+  $('.board').hide()
+  $('#next-move').hide()
+}
 module.exports = {
   declareWinner,
   hideGame,
-  showGame
+  showGame,
+  declareDraw
 }
