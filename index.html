@@ -15,34 +15,40 @@
       <header>
         <h1>tic tac toe</h1>
       </header>
-      <button class='auth'>Log In</button>
-      <span>or<span>
-      <button class='auth'>Sign Up</button>
-      <form id='log-in'>
-        <input name='username' type='text' placeholder="user name">
-        <input name="password" type="text" placeholder="password">
-        <input type='submit'>
-      </form>
+      <!--<button class='auth'>Log In</button>
+      <span>or</span>
+      <button class='auth'>Sign Up</button>-->
       <form id='sign-up'>
         <input name='username' type='text' placeholder="user name">
         <input name="password" type="text" placeholder="password">
         <input name="password" type="text" placeholder="confirm password">
-        <input type='submit'>
+        <button type='submit'>Sign Up</button>
       </form>
+      <form id='log-in'>
+        <input name='username' type='text' placeholder="user name">
+        <input name="password" type="text" placeholder="password">
+        <button type='submit'>Log In</button>
+      </form>
+
       <h2>Player X, Your move!</h2>
       <h2><span id='winnername'>Imaginary Friend</span> is the Winner!!!!</h2>
       <section class='board'>
-        <div class='square'>x</div>
-        <div class='square'>o</div>
-        <div class='square'>x</div>
-        <div class='square'>o</div>
-        <div class='square'>x</div>
-        <div class='square'>o</div>
-        <div class='square'>x</div>
-        <div class='square'>o</div>
-        <div class='square'>x</div>
+        <div id='boxZero' class='square'>.</div>
+        <div id='boxOne' class='square'>.</div>
+        <div id='boxTwo' class='square'>.</div>
+        <div id='boxThree' class='square'>.</div>
+        <div id='boxFour' class='square'>.</div>
+        <div id='boxFive' class='square'>.</div>
+        <div id='boxSix' class='square'>.</div>
+        <div id='boxSeven' class='square'>.</div>
+        <div id='boxEight' class='square'>.</div>
       </section>
-      <button class='reset'>reset</button>
-      <button name='logout'>Log Out</button>
+      <div>
+        <button id='reset'class='reset'>reset</button>
+        <button id='stats'name='stats'>Get Stats</button>
+      </div>
+      <br>
+      <button id='logout'name='logout'>Log Out</button>
+
     </body>
 </html>

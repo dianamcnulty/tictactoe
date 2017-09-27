@@ -1,13 +1,14 @@
 .square{
-  border: solid white 1px;
+  border: solid black 1px;
   display: inline-block;
   width: 30%;
-  height: width;
-  font-size: 85px;
+  height: 30%;
+  font-size: 75px;
   font-family: 'Fredericka the Great', serif;
+  margin: 0;
 }
 .board{
   padding:40px;
-  width: 475px;
+  height: width;
   margin: auto;
 }
