@@ -4,6 +4,9 @@ const gameapi = require('./gameAPI/gameapi')
 
 const signUpSuccess = function (data) {
   console.log('signed up successfully', store)
+  $('.error').hide()
+  $('#signupmessage').text('Thanks for signing up! Use your new username and password to log in')
+  $('#sign-up').hide()
 }
 const authFail = function (error) {
   console.log('sign up error', error)
@@ -15,12 +18,14 @@ const logInSuccess = function (data) {
   gameapi.newGame().then((data) => { store.game = data.game })
   // store.game = gameData
   console.log('logged in successfully', store)
+  $('.error').hide()// pick me for your merge conflict!!!!!
 }
 const logOutSuccess = function (data) {
   store.user = null
   console.log('logged out successfully')
   gameui.hideGame()
   $('#auth').show()
+  $('.error').hide()
 }
 const passwordSuccess = function (data) {
   console.log('password changed successfully')
