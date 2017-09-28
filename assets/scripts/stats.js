@@ -16,8 +16,9 @@ const showStats = function (data) {
   }
   $('#totalfinished').text(totalComplete)
   $('#totalwins').text(totalWon)
+  $('#password-update').hide()
+  $('#password-complete').hide()
   $('#statview').show()
-  console.log('totalWOn is', totalWon)
 }
 const statHandler = function () {
   gameapi.getStats()

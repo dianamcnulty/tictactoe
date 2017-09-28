@@ -25,6 +25,8 @@ const declareWinner = function (winner) {
   $('#winnername').text(winner)
   $('.board').hide()
   $('#next-move').hide()
+  $('#password-update').hide()
+  $('#password-complete').hide()
 }
 const declareDraw = function () {
   console.log('it was a draw')
