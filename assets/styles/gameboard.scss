@@ -5,10 +5,14 @@
   height: 30%;
   font-size: 75px;
   font-family: 'Fredericka the Great', serif;
-  margin: 0;
 }
+
 .board{
-  padding:40px;
-  height: width;
+  width: 400px;
+  height: 400px;
+  padding:0;
   margin: auto;
 }
+
+
+/*for mobile, use max-width 400*/
