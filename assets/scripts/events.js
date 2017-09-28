@@ -33,12 +33,13 @@ const reset = function () {
   gamelogic.resetGameData()
 }
 const getStats = function () {
-  stats.showStats()
+  stats.statHandler()
 }
 const passwordBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  console.log('I clicked the password button', data)
+  $('#statview').hide()
+  // console.log('I clicked the password button', data)
   api.updatePassword(data)
     .then(authui.passwordSuccess)
     .catch(authui.passwordFail)

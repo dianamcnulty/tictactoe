@@ -9,6 +9,7 @@ const hideGame = function () { // hideGame at start
   $('.error').hide()
   $('#show-password-form').hide()
   $('#password-update').hide()
+  $('#statview').hide()
 }
 const showGame = function () {
   $('.board').show()
@@ -20,6 +21,7 @@ const showGame = function () {
 }
 const declareWinner = function (winner) {
   $('#declare-win').show()
+  console.log('declaring winner', winner)
   $('#winnername').text(winner)
   $('.board').hide()
   $('#next-move').hide()
@@ -34,6 +36,7 @@ const declareDraw = function () {
 const resetGame = function () {
   $('.square').text('.')
   $('.board').show()
+  $('#statview').hide()
 }
 module.exports = {
   declareWinner,
