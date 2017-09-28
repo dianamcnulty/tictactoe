@@ -19,7 +19,7 @@ const logInBehavior = function (event) {
     .then(authui.logInSuccess)
     .catch(authui.authFail)
 }
-const logOut = function () {
+const logOutBehavior = function () {
   console.log('I clicked logout')
   api.logOut()
     .then(authui.logOutSuccess)
@@ -30,6 +30,14 @@ const reset = function () {
 }
 const getStats = function () {
   console.log('I cliked get stats')
+}
+const passwordBehavior = function (event) {
+  event.preventDefault()
+  const data = getFormFields(this)
+  console.log('I clicked the password button', data)
+  api.updatePassword(data)
+    .then(authui.passwordSuccess)
+    .catch(authui.passwordFail)
 }
 const clickHandlers = function () {
   $('#sign-up').on('submit', signUpBehavior)
@@ -44,8 +52,10 @@ const clickHandlers = function () {
   $('#7').on('click', gamelogic.playerMark)
   $('#8').on('click', gamelogic.playerMark)
   $('#reset').on('click', reset)
-  $('#logout').on('click', logOut)
+  $('#logout').on('click', logOutBehavior)
   $('#stats').on('click', getStats)
+  $('#show-password-form').on('click', () => $('#password-update').show())
+  $('#password-update').on('submit', passwordBehavior)
 }
 module.exports = {
   clickHandlers // need to import to index, then call this function at ready

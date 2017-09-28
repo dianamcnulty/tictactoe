@@ -6,6 +6,8 @@ const hideGame = function () { // hideGame at start
   $('#stats').hide()
   $('#logout').hide()
   $('.error').hide()
+  $('#show-password-form').hide()
+  $('#password-update').hide()
 }
 const showGame = function () {
   $('.board').show()
@@ -13,8 +15,8 @@ const showGame = function () {
   $('#reset').show()
   $('#stats').show()
   $('#logout').show()
+  $('#show-password-form').show()
 }
-
 const declareWinner = function (winner) {
   $('#declare-win').show()
   $('#winnername').text(winner)

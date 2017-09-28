@@ -55,6 +55,13 @@
       </div>
       <br>
       <button id='logout'name='logout'>Log Out</button>
-
+      <button id='show-password-form'>Update Password</button>
+      <form id='password-update'>
+        <p>To update your password, please enter your current password, then your new password and click "submit"</p>
+        <input name="passwords[old]" type='password' placeholder="old password">
+        <input name="passwords[new]" type="password" placeholder="new password">
+        <button type='submit'>Submit</button>
+      </form>
+      <h3 id='password-complete'></h3>
     </body>
 </html>
