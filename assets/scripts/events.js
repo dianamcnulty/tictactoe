@@ -1,7 +1,8 @@
 const gamelogic = require('./gamelogic')
 const getFormFields = require(`../../lib/get-form-fields`)
 const authui = require('./authui')
-const api = require('./api')
+const api = require('./userapi')
+const gameUi = require('./gameui')
 
 const signUpBehavior = function (event) {
   event.preventDefault()
@@ -26,7 +27,9 @@ const logOutBehavior = function () {
     .catch(() => console.log('logOut Failure'))
 }
 const reset = function () {
-  console.log('I clicked reset')
+  gameUi.resetGame()
+  $('.board').show()
+  gamelogic.resetGameData()
 }
 const getStats = function () {
   console.log('I cliked get stats')

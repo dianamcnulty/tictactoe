@@ -1,3 +1,4 @@
+
 const hideGame = function () { // hideGame at start
   $('.board').hide()
   $('#declare-win').hide()
@@ -30,9 +31,13 @@ const declareDraw = function () {
   $('.board').hide()
   $('#next-move').hide()
 }
+const resetGame = function () {
+  $('.square').text('.')
+}
 module.exports = {
   declareWinner,
   hideGame,
   showGame,
-  declareDraw
+  declareDraw,
+  resetGame
 }

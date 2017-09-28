@@ -2,10 +2,10 @@ const winlogic = require('./winlogic')
 const gameui = require('./gameui')
 
 let player = 'X'
-const cells = []
+const cells = ['', '', '', '', '', '', '', '', '']
 let turns = 0
 const playerMark = function (event) {
-  // console.log('player took a turn', event.target.id)
+  console.log('cells on player turen is', cells)
   if (!cells[event.target.id]) {
     $('#' + event.target.id).text(player)// updates the cell
     cells[event.target.id] = player
@@ -27,8 +27,15 @@ const playerMark = function (event) {
     $('#player').text(player) // changes player name in the message box
   }
 }
-
+const resetGameData = function () {
+  for (let i = 0; i < cells.length; i++) {
+    cells[i] = ''
+  }
+  turns = 0
+  console.log(cells)
+}
 module.exports = {
   playerMark,
-  cells
+  cells,
+  resetGameData
 }
