@@ -1,5 +1,7 @@
 const winlogic = require('./winlogic')
 const gameui = require('./gameui')
+const gamedata = require('./gameAPI/gamedata')
+const gameapi = require('./gameAPI/gameapi')
 
 let player = 'X'
 const cells = ['', '', '', '', '', '', '', '', '']
@@ -11,10 +13,12 @@ const playerMark = function (event) {
     cells[event.target.id] = player
     const winner = winlogic.findWinner(cells)
     if (winner !== undefined) { // if there's a winner - declare the winner
-      console.log('winner is', winner)
-      gameui.declareWinner(winner) // updates ui to announce winner
+      gameui.declareWinner() // updates ui to announce winner
+      gamedata.addFinishedGame(cells)
+      gameapi.sendMove(event.target.id, player, true)
       return winner
     }
+    gameapi.sendMove(event.target.id, player, false)
     turns++
     if (turns >= 9) {
       gameui.declareDraw()
@@ -27,12 +31,14 @@ const playerMark = function (event) {
     $('#player').text(player) // changes player name in the message box
   }
 }
+
 const resetGameData = function () {
   for (let i = 0; i < cells.length; i++) {
     cells[i] = ''
   }
   turns = 0
   console.log(cells)
+  gameapi.newGame()
 }
 module.exports = {
   playerMark,

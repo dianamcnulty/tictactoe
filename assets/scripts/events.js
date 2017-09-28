@@ -28,7 +28,6 @@ const logOutBehavior = function () {
 }
 const reset = function () {
   gameUi.resetGame()
-  $('.board').show()
   gamelogic.resetGameData()
 }
 const getStats = function () {

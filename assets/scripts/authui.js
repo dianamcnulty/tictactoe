@@ -1,9 +1,9 @@
 const gameui = require('./gameui')
 const store = require('./store')
+const gameapi = require('./gameAPI/gameapi')
 
 const signUpSuccess = function (data) {
   console.log('signed up successfully', store)
-  gameui.showGame()
 }
 const authFail = function (error) {
   console.log('sign up error', error)
@@ -11,8 +11,9 @@ const authFail = function (error) {
 }
 const logInSuccess = function (data) {
   store.user = data.user
-  console.log('logged in successfully', store)
   gameui.showGame()
+  gameapi.newGame()
+  console.log('logged in successfully', store)
 }
 const logOutSuccess = function (data) {
   store.user = null

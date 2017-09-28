@@ -1,4 +1,4 @@
-
+const gameapi = require('./gameAPI/gameapi')
 const hideGame = function () { // hideGame at start
   $('.board').hide()
   $('#declare-win').hide()
@@ -33,6 +33,8 @@ const declareDraw = function () {
 }
 const resetGame = function () {
   $('.square').text('.')
+  $('.board').show()
+
 }
 module.exports = {
   declareWinner,
