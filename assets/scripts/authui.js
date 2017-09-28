@@ -12,7 +12,8 @@ const authFail = function (error) {
 const logInSuccess = function (data) {
   store.user = data.user
   gameui.showGame()
-  gameapi.newGame()
+  gameapi.newGame().then((data) => { store.game = data.game })
+  // store.game = gameData
   console.log('logged in successfully', store)
 }
 const logOutSuccess = function (data) {

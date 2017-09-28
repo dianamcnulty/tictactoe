@@ -3,6 +3,8 @@ const getFormFields = require(`../../lib/get-form-fields`)
 const authui = require('./authui')
 const api = require('./userapi')
 const gameUi = require('./gameui')
+const stats = require('./stats')
+const gameapi = require('./gameAPI/gameapi')
 
 const signUpBehavior = function (event) {
   event.preventDefault()
@@ -31,7 +33,9 @@ const reset = function () {
   gamelogic.resetGameData()
 }
 const getStats = function () {
-  console.log('I cliked get stats')
+  gameapi.getStats()
+  .then(stats.showStats)
+  .catch()
 }
 const passwordBehavior = function (event) {
   event.preventDefault()

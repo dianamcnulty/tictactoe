@@ -13,26 +13,26 @@ const newGame = function () {
 }
 
 const sendMove = function (index, player, over) {
-  console.log(index, player, over)
-  // return $.ajax({
-  //   url: config.apiOrigin + '/games/' + store.game.id,
-  //   method: 'PATCH',
-  //   headers: {
-  //     Authorization: 'Token token=' + store.user.token
-  //   },
-  //   data: {
-  //     "game": {
-  //       "cell": {
-  //         "index": index,
-  //         "value": player
-  //       },
-  //       "over": over
-  //     }
-  //   }
-  // })
+  // console.log('tracked move ',store.game.id)
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'game': {
+        'cell': {
+          'index': index,
+          'value': player
+        },
+        'over': over
+      }
+    }
+  })
 }
 const getStats = function () {
-  console.log('sending get stats call - token is', store.user.token)
+  //console.log('sending get stats call - token is', store.user.token)
   return $.ajax({
     url: config.apiOrigin + '/games',
     method: 'GET',
@@ -41,5 +41,6 @@ const getStats = function () {
 }
 module.exports = {
   sendMove,
-  newGame
+  newGame,
+  getStats
 }
