@@ -15,13 +15,17 @@ const logInSuccess = function (data) {
   store.user = data.user
   // console.log('logged in successfully', store)
   gameui.showGame()
-  $('.error').hide()
+  gameapi.newGame().then((data) => { store.game = data.game })
+  // store.game = gameData
+  console.log('logged in successfully', store)
+  $('.error').hide()// pick me for your merge conflict!!!!!
 }
 const logOutSuccess = function (data) {
   store.user = null
   // console.log('logged out successfully')
   gameui.hideGame()
   $('#auth').show()
+  $('.error').hide()
 }
 const passwordSuccess = function (data) {
   // console.log('password changed successfully')

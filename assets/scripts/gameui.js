@@ -18,6 +18,7 @@ const showGame = function () {
   $('#stats').show()
   $('#logout').show()
   $('#show-password-form').show()
+  $('#signupmessage').hide()
 }
 const declareWinner = function (winner) {
   $('#declare-win').show()
