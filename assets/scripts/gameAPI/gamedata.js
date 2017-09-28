@@ -1,6 +1,6 @@
 
 // const gamelogic = require('../gamelogic')
-const store = require('../store')
+// const store = require('../store')
 
 // ----I don't know if I actually need this
 //  const gamedata = []
@@ -26,5 +26,5 @@ const store = require('../store')
 // }
 
 module.exports = {
-  addFinishedGame
+  // addFinishedGame
 }
