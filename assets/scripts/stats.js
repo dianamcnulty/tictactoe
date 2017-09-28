@@ -1,16 +1,23 @@
 const gameapi = require('./gameAPI/gameapi')
+const winlogic = require('./winlogic')
 
 const showStats = function (data) {
   $('#totalgames').text(data.games.length)
   let totalComplete = 0
+  let totalWon = 0
   for (let i = 0; i < data.games.length; i++) {
-    if (data.games.over === true) {
+    if (data.games[i].over === true) {
       totalComplete++
+      const winner = winlogic.findWinner(data.games[i].cells)
+      if (winner.toLowerCase() === 'x') {
+        totalWon++
+      }
     }
   }
   $('#totalfinished').text(totalComplete)
+  $('#totalwins').text(totalWon)
   $('#statview').show()
-  console.log(data)
+  console.log('totalWOn is', totalWon)
 }
 const statHandler = function () {
   gameapi.getStats()
@@ -21,5 +28,6 @@ const statHandler = function () {
 }
 
 module.exports = {
-  statHandler
+  statHandler,
+  showStats
 }

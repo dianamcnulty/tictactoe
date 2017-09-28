@@ -13,7 +13,7 @@ const newGame = function () {
 }
 
 const sendMove = function (index, player, over) {
-  // console.log('tracked move ',store.game.id)
+  console.log('tracked move ')
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
