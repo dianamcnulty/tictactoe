@@ -1,10 +1,13 @@
+@import "./colors";
+@import "./fonts";
+
 .square {
-  border: solid black 1px;
+  border: hidden $chalk-white 1px;
   display: inline-block;
   width: 30%;
   height: 30%;
   font-size: 75px;
-  font-family: 'Fredericka the Great', serif;
+  font-family: $bigfont, serif;
 }
 
 .board{

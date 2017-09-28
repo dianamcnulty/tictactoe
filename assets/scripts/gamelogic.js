@@ -7,7 +7,7 @@ let player = 'X'
 const cells = ['', '', '', '', '', '', '', '', '']
 let turns = 0
 const playerMark = function (event) {
-  console.log('cells on player turen is', cells)
+  // console.log('cells on player turen is', cells)
   if (!cells[event.target.id]) {
     $('#' + event.target.id).text(player)// updates the cell
     cells[event.target.id] = player

@@ -17,7 +17,7 @@ const logIn = function (data) {
   })
 }
 const logOut = function () {
-  console.log('store id is', store)
+  // console.log('store id is', store)
   return $.ajax({
     url: config.apiOrigin + '/sign-out/' + store.user.id,
     method: 'DELETE',

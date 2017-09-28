@@ -23,7 +23,7 @@ const logInBehavior = function (event) {
     .catch(authui.authFail)
 }
 const logOutBehavior = function () {
-  console.log('I clicked logout')
+  // console.log('I clicked logout')
   api.logOut()
     .then(authui.logOutSuccess)
     .catch(() => console.log('logOut Failure'))
