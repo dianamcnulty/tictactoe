@@ -4,7 +4,7 @@ const authui = require('./authui')
 const api = require('./userapi')
 const gameUi = require('./gameui')
 const stats = require('./stats')
-const gameapi = require('./gameAPI/gameapi')
+// const gameapi = require('./gameAPI/gameapi')
 
 const signUpBehavior = function (event) {
   event.preventDefault()
@@ -33,9 +33,7 @@ const reset = function () {
   gamelogic.resetGameData()
 }
 const getStats = function () {
-  gameapi.getStats()
-  .then(stats.showStats)
-  .catch()
+  stats.showStats()
 }
 const passwordBehavior = function (event) {
   event.preventDefault()

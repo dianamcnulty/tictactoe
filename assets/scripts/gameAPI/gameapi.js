@@ -32,11 +32,13 @@ const sendMove = function (index, player, over) {
   })
 }
 const getStats = function () {
-  //console.log('sending get stats call - token is', store.user.token)
+  console.log('sending get stats call')
   return $.ajax({
     url: config.apiOrigin + '/games',
     method: 'GET',
-    Authorization: 'Token token=' + store.user.token
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 module.exports = {
