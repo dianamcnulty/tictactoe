@@ -1,5 +1,5 @@
 // const gameapi = require('./gameAPI/gameapi')
-const gamelogic = require('./gamelogic')
+// const gamelogic = require('./gamelogic')
 const hideGame = function () { // hideGame at start
   $('.board').hide()
   $('#declare-win').hide()

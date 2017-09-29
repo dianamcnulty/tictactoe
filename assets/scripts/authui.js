@@ -8,7 +8,7 @@ const signUpSuccess = function (data) {
   $('.error').hide()
   $('#sign-up').hide()
   $('#loginmessage').hide()
-  console.log(data)
+  // console.log(data)
 }
 const authFail = function () {
   $('.error').show()
@@ -19,7 +19,7 @@ const logInSuccess = function (data) {
   gameui.showGame()
   gameapi.newGame().then((data) => { store.game = data.game })
   // store.game = gameData
-  console.log('logged in successfully', store)
+  // console.log('logged in successfully', store)
   $('.error').hide()
 }
 const logOutSuccess = function (data) {

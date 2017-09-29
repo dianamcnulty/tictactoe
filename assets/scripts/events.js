@@ -25,7 +25,7 @@ const logOutBehavior = function () {
   // console.log('I clicked logout')
   api.logOut()
     .then(authui.logOutSuccess)
-    .catch(() => console.log('logOut Failure'))
+    .catch(() => $('#password.message').text('Whoops, there was an error logging out. Please try that again.'))
 }
 const reset = function () {
   gameUi.resetGame()

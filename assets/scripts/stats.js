@@ -2,7 +2,7 @@ const gameapi = require('./gameAPI/gameapi')
 const winlogic = require('./winlogic')
 
 const showStats = function (data) {
-  console.log('my stats are', data)
+  // console.log('my stats are', data)
   $('#totalgames').text(data.games.length)
   let totalComplete = 0
   let totalWon = 0
@@ -26,7 +26,7 @@ const statHandler = function () {
     .then((data) => {
       showStats(data)
     })
-    .catch((error) => { console.log('failed to get stats', error) })
+    .catch(() => { $('#password-message').text('Uh Oh, we had a problem getting those stats for you. Please try again.') })
 }
 
 module.exports = {

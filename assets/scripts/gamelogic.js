@@ -14,7 +14,7 @@ const playerMark = function (event) {
     cells[event.target.id] = player
     const winner = winlogic.findWinner(cells)
     if (winner !== undefined) { // if there's a winner - declare the winner
-      console.log('winner is', winner)
+      // console.log('winner is', winner)
       gameui.declareWinner(winner) // updates ui to announce winner
       // gamedata.addFinishedGame(cells)
       gameapi.sendMove(event.target.id, player, true)
@@ -40,7 +40,7 @@ const resetGameData = function () {
     cells[i] = ''
   }
   turns = 0
-  console.log(cells)
+  // console.log(cells)
   gameapi.newGame()
 }
 module.exports = {

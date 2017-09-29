@@ -4,47 +4,53 @@
 body {
   background: $chalkboard-green;
   color: $chalk-white;
-  text-align: center;
   font-family: $smallfont, cursive;
+  text-align: center;
 }
 
 button {
-  color: $chalk-white;
   background-color: $chalkboard-green;
   border: dashed 2px $alerts;
+  color: $chalk-white;
   font-size: 20px;
 }
 
 h1 {
   font-family: $bigfont, serif;
   font-size: 75px;
-  font-weight:normal;
+  font-weight: normal;
 }
-input {
-  color: $chalkboard-green;
-}
+
 section {
   padding: 20px;
 }
+
 form {
   padding: 20px;
 }
+
 input {
-  margin: 5px;
   background-color: $chalk-white;
+  color: $chalkboard-green;
   font-size: 20px;
+  margin: 5px;
 }
-.error, .alert {
+
+.error,
+.alert {
   color: $alerts;
 }
+
 .winners {
-  margin: 100px;
   border: dashed $alerts 3px;
+  margin: 100px;
   padding: 50px;
 }
+
 .statcount {
   color: $alerts;
 }
-p{
+
+p {
   font-size: 20px;
 }

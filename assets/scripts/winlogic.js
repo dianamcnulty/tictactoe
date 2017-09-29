@@ -1,7 +1,7 @@
 // const gamelogic = require('./gamelogic')
 
 const findWinner = function (cells) {
-  console.log(cells)
+  // console.log(cells)
   // I know this is ugly and ridiculous! but I think it will work. This if statement checks if the winning combinations have the same player in those cells
   if (cells[0]) {
     if ((cells[0] === cells[1] && cells[0] === cells[2]) ||

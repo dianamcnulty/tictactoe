@@ -1,26 +1,26 @@
-@import "./colors";
-@import "./fonts";
+@import './colors';
+@import './fonts';
 
 .square {
   border: hidden $chalk-white 1px;
   display: inline-block;
-  width: 30%;
-  height: 30%;
-  font-size: 75px;
   font-family: $bigfont, serif;
+  font-size: 75px;
+  height: 30%;
+  width: 30%;
 }
 
-.board{
-  width: 400px;
+.board {
   height: 400px;
-  padding:0;
   margin: auto;
+  padding: 0;
+  width: 400px;
 }
-@media (min-width: 900px){
-  .board{
-    width: 600px;
+@media (min-width: 900px) {
+  .board {
     height: 600px;
-    padding:0;
     margin: auto;
+    padding: 0;
+    width: 600px;
   }
 }

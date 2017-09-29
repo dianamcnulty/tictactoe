@@ -2,7 +2,7 @@ const config = require('../config')
 const store = require('../store')
 
 const newGame = function () {
-  console.log('sending new game call - token is', store.user.token)
+  // console.log('sending new game call - token is', store.user.token)
   return $.ajax({
     url: config.apiOrigin + '/games',
     method: 'POST',
@@ -13,7 +13,7 @@ const newGame = function () {
 }
 
 const sendMove = function (index, player, over) {
-  console.log('tracked move ')
+  // console.log('tracked move ')
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
