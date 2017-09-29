@@ -7,7 +7,8 @@ let player = 'X'
 const cells = ['', '', '', '', '', '', '', '', '']
 let turns = 0
 const playerMark = function (event) {
-  // console.log('cells on player turen is', cells)
+  // console.log('cells on player turn is', cells)
+  gameui.inPlayView()
   if (!cells[event.target.id]) {
     $('#' + event.target.id).text(player)// updates the cell
     cells[event.target.id] = player
@@ -34,6 +35,7 @@ const playerMark = function (event) {
 }
 
 const resetGameData = function () {
+  player = 'X'
   for (let i = 0; i < cells.length; i++) {
     cells[i] = ''
   }

@@ -21,7 +21,7 @@
       <section id='auth'>
         <form id='sign-up'>
           <h3>First Visit? Please Sign Up!</h3>
-          <input name="credentials[email]" type='text' placeholder="username">
+          <input style="display: block; margin:auto;"name="credentials[email]" type='text' placeholder="username">
           <input name="credentials[password]" type="password" placeholder="password">
           <input name="credentials[password]" type="password" placeholder="confirm password">
           <button type='submit'>Sign Up</button>
@@ -29,8 +29,8 @@
         <h3 id='signupmessage'></h3>
         <form id='log-in'>
           <h3>Already have a login ID? Go ahead and log in!</h3>
-          <input name="credentials[email]" type='text' placeholder="username">
-          <input name="credentials[password]" type="password" placeholder="password">
+          <input class='login' name="credentials[email]" type='text' placeholder="username">
+          <input class='login' name="credentials[password]" type="password" placeholder="password">
           <button type='submit'>Log In</button>
         </form>
         <div class='error'>
@@ -38,8 +38,8 @@
         </div>
       </section>
       <section id='game'>
-        <h2 id='next-move'>Player <span id='player'>X</span>, Your move!</h2>
-        <h2 id='declare-win'>Player <span id='winnername'>__</span> is the Winner!!!!</h2>
+        <h2 id='next-move'>Player <span id='player'>X</span> , Your move!</h2>
+        <h2 class='winners'id='declare-win'>Player <span id='winnername'>__</span> is the Winner!!!!</h2>
         <section class='board'>
           <div id='0' class='square'>.</div>
           <div id='1' class='square'>.</div>
@@ -58,8 +58,7 @@
           <H3>games won: <span id="totalwins"></span></h3>
       </section>
       <div>
-        <button id='reset'class='reset'>New Game</button>
-
+        <button id='reset'class='reset'>Save and Start a New Game</button>
       </div>
       <br>
       <button id='logout'name='logout'>Log Out</button>
@@ -71,6 +70,6 @@
         <input name="passwords[new]" type="password" placeholder="new password">
         <button type='submit'>Submit</button>
       </form>
-      <h3 id='password-complete'></h3>
+      <h3 id='password-message'></h3>
     </body>
 </html>

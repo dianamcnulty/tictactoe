@@ -1,4 +1,5 @@
 // const gameapi = require('./gameAPI/gameapi')
+const gamelogic = require('./gamelogic')
 const hideGame = function () { // hideGame at start
   $('.board').hide()
   $('#declare-win').hide()
@@ -12,6 +13,7 @@ const hideGame = function () { // hideGame at start
   $('#statview').hide()
 }
 const showGame = function () {
+  $('#next-move').show()
   $('.board').show()
   $('#auth').hide()
   $('#reset').show()
@@ -20,11 +22,18 @@ const showGame = function () {
   $('#show-password-form').show()
   $('#signupmessage').hide()
 }
+const inPlayView = function () {
+  $('#statview').hide()
+  $('#password-update').hide()
+  $('#password-complete').hide()
+  $('.error').hide()
+}
 const declareWinner = function (winner) {
   $('#declare-win').show()
-  console.log('declaring winner', winner)
+  // console.log('declaring winner', winner)
   $('#winnername').text(winner)
   $('.board').hide()
+  // $('.square').off()
   $('#next-move').hide()
   $('#password-update').hide()
   $('#password-complete').hide()
@@ -40,11 +49,15 @@ const resetGame = function () {
   $('.square').text('.')
   $('.board').show()
   $('#statview').hide()
+  $('#declare-win').hide()
+  $('#player').text('X')
+  $('#next-move').show()
 }
 module.exports = {
   declareWinner,
   hideGame,
   showGame,
   declareDraw,
-  resetGame
+  resetGame,
+  inPlayView
 }

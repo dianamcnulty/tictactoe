@@ -12,17 +12,20 @@ button {
   color: $chalkboard-green;
 }
 
-h1{
+h1 {
   font-family: $bigfont, serif;
   font-size: 75px;
   font-weight:normal;
 }
-input{
+input {
   color: $chalkboard-green;
 }
-section{
+section {
   padding: 20px;
 }
-form{
+form {
   padding: 20px;
+}
+input {
+  margin: 5px;
 }
