@@ -28,7 +28,7 @@
         </form>
         <h3 id='signupmessage'></h3>
         <form id='log-in'>
-          <h3>Already have a login ID? Go ahead and log in!</h3>
+          <h3 id='loginmessage'>Already have a login ID? Go ahead and log in!</h3>
           <input class='login' name="credentials[email]" type='text' placeholder="username">
           <input class='login' name="credentials[password]" type="password" placeholder="password">
           <button type='submit'>Log In</button>
@@ -53,9 +53,9 @@
         </section>
       </section>
       <section id='statview'>
-        <H3>total games played: <span id="totalgames"></span class='statcount'></h3>
-        <H3>games completed: <span id="totalfinished"></span class='statcount'></h3>
-          <H3>games won: <span id="totalwins"></span class='statcount'></h3>
+        <H3>total games played: <span id="totalgames" class='statcount'></span></h3>
+        <H3>games completed: <span id="totalfinished" class='statcount'></span></h3>
+          <H3>games won: <span id="totalwins" class='statcount'></span></h3>
       </section>
       <div>
         <button id='reset'class='reset'>Save and Start a New Game</button>

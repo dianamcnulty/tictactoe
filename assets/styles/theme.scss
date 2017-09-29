@@ -9,8 +9,10 @@ body {
 }
 
 button {
-  color: $chalkboard-green;
-  background-color: $chalky;
+  color: $chalk-white;
+  background-color: $chalkboard-green;
+  border: dashed 2px $alerts;
+  font-size: 20px;
 }
 
 h1 {
@@ -30,6 +32,7 @@ form {
 input {
   margin: 5px;
   background-color: $chalk-white;
+  font-size: 20px;
 }
 .error, .alert {
   color: $alerts;
@@ -41,4 +44,7 @@ input {
 }
 .statcount {
   color: $alerts;
+}
+p{
+  font-size: 20px;
 }

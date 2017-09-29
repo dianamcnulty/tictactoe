@@ -16,6 +16,11 @@
   padding:0;
   margin: auto;
 }
-
-
-/*for mobile, use max-width 400*/
+@media (min-width: 900px){
+  .board{
+    width: 600px;
+    height: 600px;
+    padding:0;
+    margin: auto;
+  }
+}

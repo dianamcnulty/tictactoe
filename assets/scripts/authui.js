@@ -7,6 +7,7 @@ const signUpSuccess = function (data) {
   $('#signupmessage').text('Thanks for signing up! Enter your new user name and password to log in.')
   $('.error').hide()
   $('#sign-up').hide()
+  $('#loginmessage').hide()
 }
 const authFail = function () {
   $('.error').show()
@@ -18,7 +19,7 @@ const logInSuccess = function (data) {
   gameapi.newGame().then((data) => { store.game = data.game })
   // store.game = gameData
   console.log('logged in successfully', store)
-  $('.error').hide()// pick me for your merge conflict!!!!!
+  $('.error').hide()
 }
 const logOutSuccess = function (data) {
   store.user = null
@@ -29,6 +30,7 @@ const logOutSuccess = function (data) {
   $('#signupmessage').show()
   $('.error').hide()
   $('.login').val('')
+  $('loginmessage').show()
 }
 const passwordSuccess = function (data) {
   // console.log('password changed successfully')
