@@ -10,6 +10,7 @@ body {
 
 button {
   color: $chalkboard-green;
+  background-color: $chalky;
 }
 
 h1 {
@@ -28,4 +29,16 @@ form {
 }
 input {
   margin: 5px;
+  background-color: $chalk-white;
+}
+.error, .alert {
+  color: $alerts;
+}
+.winners {
+  margin: 100px;
+  border: dashed $alerts 3px;
+  padding: 50px;
+}
+.statcount {
+  color: $alerts;
 }
