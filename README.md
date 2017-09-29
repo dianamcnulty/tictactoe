@@ -1,26 +1,26 @@
 Tic Tac Toe.
 
 Description:
-  A simple tic tac toe game which can track users stats.
-  Users sign in with their account to play. Their game is saved to an API (set up by General Assembly). So they can later retrieve stats (# of games played, finished, and won).
+  A simple tic tac toe game which can track user’s stats.
+  Users sign in with their account to play. Their game is saved to an API (set up by General Assembly). They can later retrieve stats (# of games played, finished, and won).
 
-Link to your hosted game:
+Link to hosted game:
   https://dianamcnulty.github.io/tictactoe/
 
 Technologies used:
   Javascript, Jquery, Sass
   GA browser template: https://github.com/ga-wdi-boston/browser-template
 
-Ddevelopment process and problem-solving strategies:
+Development process and problem-solving strategies:
   Started with wireframe and basic html structure. The cornerstones of this design are the jquery .show() and .hide() methods. This allows for a single page application.
-  I started with basic game functionality then worked on the ajax calls for login, then for updating and retrieving game information from the server. I tested new functionality every step of the way and reqularly ran smoke tests to make sure I didn't break any existing functionality.
-  My strategy mostly involves segmenting features or issues into small tasks, and handling only one problem at a time. It's tempting to get distracted by something else that needs fixing, but I try put those issues on a to-do list to tackle at another time. 
+  I started with basic game functionality then worked on the ajax calls for login, then for updating and retrieving game information from the server. I tested new functionality every step of the way and regularly ran smoke tests to make sure I didn't break any existing functionality.
+  My strategy mostly involves segmenting features or issues into small tasks, and handling only one problem at a time. It's tempting to get distracted by something else that needs fixing, but I try put those issues on a to-do list to tackle at another time.
   Once the "wiring" was all hooked up. I worked on hiding and showing sections of the page based on where the user was in the process. (For example: log in fields should be hidden if the user is already logged in)
-  Finally, when everthing was tested and functioning properly, styling was added as a finishing touch.
+  Finally, when everything was tested and functioning properly, styling was added as a finishing touch.
   Followed by another round of testing for good measure.
  List unsolved problems which would be fixed in future iterations.
 
-Link to wireframes and user stories.:
+Link to wireframes and user stories:
  Wireframes:
     project_planning/wireframe-desktop.JPG
     project_planning/wireframe-mobile.JPG
