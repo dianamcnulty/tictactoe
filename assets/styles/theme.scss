@@ -52,11 +52,12 @@ input {
 }
 
 .undefeated {
+  color: $alerts;
+  display: inline-block;
   margin: 10px;
   padding: 5px;
-  display: inline-block;
-  color: $alerts;
 }
+
 .statview {
   margin-bottom: 20px;
 }
