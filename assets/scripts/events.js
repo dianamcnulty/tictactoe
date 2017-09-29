@@ -23,6 +23,7 @@ const logInBehavior = function (event) {
 }
 const logOutBehavior = function () {
   // console.log('I clicked logout')
+  gamelogic.resetGameData()
   api.logOut()
     .then(authui.logOutSuccess)
     .catch(() => $('#password.message').text('Whoops, there was an error logging out. Please try that again.'))
@@ -37,8 +38,6 @@ const getStats = function () {
 const passwordBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  $('#statview').hide()
-  // console.log('I clicked the password button', data)
   api.updatePassword(data)
     .then(authui.passwordSuccess)
     .catch(authui.passwordFail)
@@ -58,7 +57,10 @@ const clickHandlers = function () {
   $('#reset').on('click', reset)
   $('#logout').on('click', logOutBehavior)
   $('#stats').on('click', getStats)
-  $('#show-password-form').on('click', () => $('#password-update').show())
+  $('#show-password-form').on('click', () => {
+    $('.statview').hide()
+    $('#password-update').show()
+  })
   $('#password-update').on('submit', passwordBehavior)
 }
 module.exports = {

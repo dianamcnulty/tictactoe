@@ -18,8 +18,14 @@ const showStats = function (data) {
   $('#totalfinished').text(totalComplete)
   $('#totalwins').text(totalWon)
   $('#password-update').hide()
-  $('#password-complete').hide()
-  $('#statview').show()
+  $('.statview').show()
+  $('#password-message').hide()
+  if (totalWon === totalComplete) {
+    $('#undefeated').text('Oh Snap!  You\'re Undefeated!!')
+    $('#undefeated').show()
+  } else {
+    $('#undefeated').hide()
+  }
 }
 const statHandler = function () {
   gameapi.getStats()

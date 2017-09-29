@@ -27,6 +27,7 @@ const inPlayView = function () {
   $('#password-update').hide()
   $('#password-complete').hide()
   $('.error').hide()
+  $('#password-message').hide()
 }
 const declareWinner = function (winner) {
   $('#declare-win').show()
@@ -36,11 +37,11 @@ const declareWinner = function (winner) {
   // $('.square').off()
   $('#next-move').hide()
   $('#password-update').hide()
-  $('#password-complete').hide()
+  $('#password-message').hide()
 }
 const declareDraw = function () {
   console.log('it was a draw')
-  $('#declare-win').html('<h2>Woah, you are evenly matched! <br> This game was a draw</h2>')
+  $('#declare-win').html('<h2>Wow, you two are evenly matched! <br> This game was a draw.</h2>')
   $('#declare-win').show()
   $('.board').hide()
   $('#next-move').hide()
@@ -52,6 +53,8 @@ const resetGame = function () {
   $('#declare-win').hide()
   $('#player').text('X')
   $('#next-move').show()
+  $('#password-update').hide()
+  $('#password-message').hide()
 }
 module.exports = {
   declareWinner,

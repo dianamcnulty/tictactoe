@@ -21,9 +21,9 @@ h1 {
   font-weight: normal;
 }
 
-section {
-  padding: 20px;
-}
+// section {
+//   padding: 20px;
+// }
 
 form {
   padding: 20px;
@@ -49,6 +49,16 @@ input {
 
 .statcount {
   color: $alerts;
+}
+
+.undefeated {
+  margin: 10px;
+  padding: 5px;
+  display: inline-block;
+  color: $alerts;
+}
+.statview {
+  margin-bottom: 20px;
 }
 
 p {

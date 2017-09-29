@@ -32,6 +32,7 @@ const logOutSuccess = function (data) {
   $('.error').hide()
   $('.login').val('')
   $('loginmessage').show()
+  $('.square').text('.')
 }
 const passwordSuccess = function (data) {
   // console.log('password changed successfully')
@@ -42,6 +43,7 @@ const passwordSuccess = function (data) {
 }
 const passwordFail = function () {
   $('#password-message').text('uh oh... your password update didn\'t process. Please Try again')
+  $('#password-message').show()
 }
 module.exports = {
   signUpSuccess,

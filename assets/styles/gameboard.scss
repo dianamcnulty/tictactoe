@@ -18,9 +18,24 @@
 }
 @media (min-width: 900px) {
   .board {
-    height: 600px;
+    height: 450px;
     margin: auto;
     padding: 0;
     width: 600px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .square {
+    font-size: 75px;
+    height: 180;
+    width: 180;
+    margin-bottom: 0;
+  }
+  .stat {
+    margin: 10px;
+    padding-top: 0;
+  }
+  .statview {
+    margin-bottom: 20px;
   }
 }

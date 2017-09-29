@@ -39,7 +39,7 @@
       </section>
       <section id='game'>
         <h2 id='next-move'>Player <span id='player' style='font-family: $bigfont;'>X</span> , Your move!</h2>
-        <h2 class='winners'id='declare-win'>Player <span id='winnername'>__</span> is the Winner!!!!</h2>
+        <h2 class='winners'id='declare-win'>Player <span id='winnername'>__</span> is the Ultimate Champion of the World!!!!</h2>
         <section class='board'>
           <div id='0' class='square'>.</div>
           <div id='1' class='square'>.</div>
@@ -52,10 +52,11 @@
           <div id='8' class='square'>.</div>
         </section>
       </section>
-      <section id='statview'>
-        <H3>total games played: <span id="totalgames" class='statcount'></span></h3>
-        <H3>games completed: <span id="totalfinished" class='statcount'></span></h3>
-          <H3>games won: <span id="totalwins" class='statcount'></span></h3>
+      <section class='statview' id='statview'>
+        <H3 class='stat' >total games played: <span id="totalgames" class='statcount'></span></h3>
+        <H3 class='stat'>games completed: <span id="totalfinished" class='statcount'></span></h3>
+        <H3 class='stat'>games won: <span id="totalwins" class='statcount'></span></h3>
+        <H3 class='stat undefeated' id="undefeated"></H3>
       </section>
       <div>
         <button id='reset'class='reset'>Save and Start a New Game</button>
