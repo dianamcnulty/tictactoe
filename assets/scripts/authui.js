@@ -24,6 +24,7 @@ const logInSuccess = function (data) {
 }
 const logOutSuccess = function (data) {
   store.user = null
+  store.game = null
   // console.log('logged out successfully')
   gameui.hideGame()
   $('#auth').show()
