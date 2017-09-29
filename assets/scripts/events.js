@@ -9,7 +9,6 @@ const stats = require('./stats')
 const signUpBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  // console.log('I clicked the signup button', data)
   api.signUp(data)
     .then(authui.signUpSuccess)
     .catch(authui.authFail)
@@ -17,7 +16,7 @@ const signUpBehavior = function (event) {
 const logInBehavior = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  console.log('I clicked the login button', data)
+  // console.log('I clicked the login button', data)
   api.logIn(data)
     .then(authui.logInSuccess)
     .catch(authui.authFail)

@@ -32,7 +32,7 @@ const sendMove = function (index, player, over) {
   })
 }
 const getStats = function () {
-  console.log('sending get stats call')
+  // console.log('sending get stats call')
   return $.ajax({
     url: config.apiOrigin + '/games',
     method: 'GET',

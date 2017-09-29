@@ -2,6 +2,7 @@ const gameapi = require('./gameAPI/gameapi')
 const winlogic = require('./winlogic')
 
 const showStats = function (data) {
+  console.log('my stats are', data)
   $('#totalgames').text(data.games.length)
   let totalComplete = 0
   let totalWon = 0
