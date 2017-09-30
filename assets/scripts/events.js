@@ -11,7 +11,7 @@ const signUpBehavior = function (event) {
   const data = getFormFields(this)
   api.signUp(data)
     .then(authui.signUpSuccess)
-    .catch(authui.authFail)
+    .catch(authui.signUpFail)
 }
 const logInBehavior = function (event) {
   event.preventDefault()
@@ -19,7 +19,7 @@ const logInBehavior = function (event) {
   // console.log('I clicked the login button', data)
   api.logIn(data)
     .then(authui.logInSuccess)
-    .catch(authui.authFail)
+    .catch(authui.logInFail)
 }
 const logOutBehavior = function () {
   // console.log('I clicked logout')

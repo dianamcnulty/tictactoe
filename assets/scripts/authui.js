@@ -8,11 +8,18 @@ const signUpSuccess = function (data) {
   $('.error').hide()
   $('#sign-up').hide()
   $('#loginmessage').hide()
+  $('.login').val('')
   // console.log(data)
 }
-const authFail = function () {
+const signUpFail = function () {
   $('.error').hide()
   $('.error').fadeIn(200)
+}
+const logInFail = function () {
+  $('.error').hide()
+  $('.error').fadeIn(200)
+  $('#sign-up').show()
+  $('.login').val('')
 }
 const logInSuccess = function (data) {
   store.user = data.user
@@ -50,9 +57,10 @@ const passwordFail = function () {
 }
 module.exports = {
   signUpSuccess,
-  authFail,
+  signUpFail,
   logInSuccess,
   logOutSuccess,
   passwordSuccess,
-  passwordFail
+  passwordFail,
+  logInFail
 }
