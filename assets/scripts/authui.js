@@ -11,7 +11,8 @@ const signUpSuccess = function (data) {
   // console.log(data)
 }
 const authFail = function () {
-  $('.error').show()
+  $('.error').hide()
+  $('.error').fadeIn(200)
 }
 const logInSuccess = function (data) {
   store.user = data.user
@@ -44,7 +45,8 @@ const passwordSuccess = function (data) {
 }
 const passwordFail = function () {
   $('#password-message').text('uh oh... your password update didn\'t process. Please Try again')
-  $('#password-message').show()
+  $('#password-message').hide()
+  $('#password-message').fadeIn(200)
 }
 module.exports = {
   signUpSuccess,

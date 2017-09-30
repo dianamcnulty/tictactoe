@@ -24,6 +24,7 @@ const playerMark = function (event) {
     turns++
     if (turns >= 9) {
       gameui.declareDraw()
+      gameapi.sendMove(event.target.id, player, true)
     }
     if (player === 'X') { // switch players
       player = 'O'
