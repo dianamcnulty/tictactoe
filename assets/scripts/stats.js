@@ -10,7 +10,7 @@ const showStats = function (data) {
     if (data.games[i].over === true) {
       totalComplete++
       const winner = winlogic.findWinner(data.games[i].cells)
-      if (winner === 'x') {
+      if (winner === 'X') {
         totalWon++
       }
     }
