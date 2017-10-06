@@ -20,7 +20,16 @@
   Finally, when everything was tested and functioning properly, styling was added as a finishing touch.
   Followed by another round of testing for good measure.
 
+**Future Improvements/Enhancements**
+  Refactor JS code to use classes for click handlers instead of ID's
 
+  remove code that was commented out
+
+  add comments for clarity
+
+  Potential Enhancement: Give users links to sites with history of Tic-Tac-Toe, strategy, etc.
+
+  
 **Link to wireframes and user stories:**
 
  *Wireframes:*
