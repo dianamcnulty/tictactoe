@@ -22,14 +22,11 @@
 
 **Future Improvements/Enhancements**
   Refactor JS code to use classes for click handlers instead of ID's
-
   remove code that was commented out
-
   add comments for clarity
+  *Potential Enhancement:* Give users links to sites with history of Tic-Tac-Toe, strategy, etc.
 
-  Potential Enhancement: Give users links to sites with history of Tic-Tac-Toe, strategy, etc.
 
-  
 **Link to wireframes and user stories:**
 
  *Wireframes:*
